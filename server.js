@@ -11,6 +11,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Use contacts router
+const contactsRouter = require('./routes/contacts');
+app.use('/contacts', contactsRouter);
+
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGODB_URI, {
