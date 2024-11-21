@@ -67,7 +67,6 @@ router.delete('/:id', getContact, async (req, res) => {
   }
 });
 
-// Middleware function to get contact by ID
 async function getContact(req, res, next) {
   let contact;
   try {
